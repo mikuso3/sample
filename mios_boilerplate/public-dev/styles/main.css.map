@@ -1,0 +1,19 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"../src/sass/main.scss",
+		"../../variables/*.scss",
+		"../src/sass/variables/_test.scss",
+		"../../foundation/*",
+		"../src/sass/foundation/_typography.scss",
+		"../../pc/foundation/*",
+		"../../functions/*",
+		"../../pc/extends/*",
+		"../../pc/component/*",
+		"../../pc/pages/*",
+		"../../utilities/*"
+	],
+	"names": [],
+	"mappings": ";AEAA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC,GACV;;;AEFD,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,kFAAkF;EAC/F,WAAW,EAAE,GAAG,GACjB"
+}
