@@ -1,0 +1,47 @@
+{
+  "name": "Mios_Boilerplate",
+  "version": "0.0.1",
+  "description": "sass compile and minfy",
+  "config": {
+    "src_path": "./public-dev/src",
+    "public_path": "./public-dev",
+    "production_path": "./public"
+  },
+  "scripts": {
+    "build:sass": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style nested -o $npm_package_config_public_path/styles -r $npm_package_config_src_path/sass",
+    "build:sass:production": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style compressed -o $npm_package_config_public_path/styles -r $npm_package_config_src_path/sass",
+    "build:autoprefixer": "postcss --use autoprefixer --replace $npm_package_config_public_path/styles/*.css && postcss --use autoprefixer --replace $npm_package_config_public_path/styles/smart_phone/*.css",
+    "build:css": "run-s build:sass build:autoprefixer",
+    "build:html": "ejs-cli --base-dir public-dev/src/ejs '*.ejs' --out $npm_package_config_public_path",
+    "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
+    "watch:autoprefixer": "nodemon -e css -x \"npm run build:autoprefixer\"",
+    "watch:ejs": "nodemon -e ejs -x \"npm run build:html \"",
+    "copy:html": "cp -rf $npm_package_config_public_path/*.html $npm_package_config_production_path",
+    "copy:css": "mkdir -p $npm_package_config_production_path/styles && cp -rf $npm_package_config_public_path/styles $npm_package_config_production_path",
+    "copy:js": "mkdir -p $npm_package_config_production_path/scripts && cp -rf $npm_package_config_public_path/scripts $npm_package_config_production_path",
+    "copy:images": "mkdir -p $npm_package_config_production_path/images && cp -rf $npm_package_config_public_path/images $npm_package_config_production_path",
+    "webpack": "webpack",
+    "watch": "run-p watch:sass watch:ejs",
+    "build": "npm-run-all build:*",
+    "hush": "node ./node-scripts/replace-filerev.js",
+    "copy": "npm-run-all copy:*"
+  },
+  "author": "mio oishi",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.5",
+    "ejs-cli": "^2.0.0",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "node-sass-globbing": "0.0.23",
+    "nodegit": "^0.20.3",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.1",
+    "postcss": "^6.0.13",
+    "postcss-cli": "^4.1.1",
+    "replace": "^0.3.0"
+  }
+}
