@@ -1,10 +1,7 @@
 .test {
   margin: 0;
-  -webkit-box-shadow: 10px 10px 0 0;
-          box-shadow: 10px 10px 0 0;
+  box-shadow: 10px 10px 0 0;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 0 0 0 0; }
 
@@ -12,5 +9,3 @@ html {
   font-size: 16px;
   font-family: -apple-system, blinkMacSystemFont, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   line-height: 1.5; }
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtFQUNWLGtDQUEwQjtVQUExQiwwQkFBMEI7RUFDMUIsb0JBQW9CO0VBQ3BCLHFCQUFjO0VBQWQscUJBQWM7RUFBZCxjQUFjO0VBQ2QsaUJBQWlCLEVBQUU7O0FBRXJCO0VBQ0UsZ0JBQWdCO0VBQ2hCLGdHQUFnRztFQUNoRyxpQkFBaUIsRUFBRSIsImZpbGUiOiJtYWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50ZXN0IHtcbiAgbWFyZ2luOiAwO1xuICBib3gtc2hhZG93OiAxMHB4IDEwcHggMCAwO1xuICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBwYWRkaW5nOiAwIDAgMCAwOyB9XG5cbmh0bWwge1xuICBmb250LXNpemU6IDE2cHg7XG4gIGZvbnQtZmFtaWx5OiAtYXBwbGUtc3lzdGVtLCBibGlua01hY1N5c3RlbUZvbnQsICdIaXJhZ2lubyBLYWt1IEdvdGhpYyBQcm9OJywgTWVpcnlvLCBzYW5zLXNlcmlmO1xuICBsaW5lLWhlaWdodDogMS41OyB9XG4iXX0= */

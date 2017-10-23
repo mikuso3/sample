@@ -16,12 +16,14 @@
     "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
     "watch:autoprefixer": "nodemon -e css -x \"npm run build:autoprefixer\"",
     "watch:ejs": "nodemon -e ejs -x \"npm run build:html \"",
+    "copy:html": "cp -rf $npm_package_config_public_path/*.html $npm_package_config_production_path",
     "copy:css": "mkdir -p $npm_package_config_production_path/styles && cp -rf $npm_package_config_public_path/styles $npm_package_config_production_path",
     "copy:js": "mkdir -p $npm_package_config_production_path/scripts && cp -rf $npm_package_config_public_path/scripts $npm_package_config_production_path",
     "copy:images": "mkdir -p $npm_package_config_production_path/images && cp -rf $npm_package_config_public_path/images $npm_package_config_production_path",
     "webpack": "webpack",
     "watch": "run-p watch:sass watch:ejs",
     "build": "npm-run-all build:*",
+    "hush": "node ./node-scripts/replace-filerev.js",
     "copy": "npm-run-all copy:*"
   },
   "author": "mio oishi",
@@ -35,9 +37,11 @@
     "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "node-sass-globbing": "0.0.23",
+    "nodegit": "^0.20.3",
     "nodemon": "^1.12.1",
     "npm-run-all": "^4.1.1",
     "postcss": "^6.0.13",
-    "postcss-cli": "^4.1.1"
+    "postcss-cli": "^4.1.1",
+    "replace": "^0.3.0"
   }
 }
