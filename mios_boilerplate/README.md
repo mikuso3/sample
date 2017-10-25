@@ -3,19 +3,20 @@
 see [README_FRONTEND.md](./README_FRONTEND.md)
 # Mio's Boilerplate
 
+## Using Package
+npm i nodemon（監視）<br>
+npm i ejs-cli（ejsのコンパイル）<br>
+npm i node-sass（スタイルのコンパイル）
+npm i node-sass-globbing（importを一纏めにできる）
 
-## 必要なファイル
-npm install nodemon（監視）<br>
-npm install ejs-cli（ejsのコンパイル）<br>
-npm install node-sass（スタイルのコンパイル）
-npm install node-sass-globbing（importを一纏めにできる）
-
-## ejsのビルド
+## Build of ejs
 'npm run ejs'
 
-## スタイルを監視
-'npm run watch:style'
+## Watch All
+'npm run watch'
 
-## 全てを実行
-'npm run all'
-# works
+## Add hash
+'npm run hash'
+
+# Copy to folder of public
+'npm run copy'

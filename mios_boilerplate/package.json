@@ -1,6 +1,6 @@
 {
   "name": "Mios_Boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "sass compile and minfy",
   "config": {
     "src_path": "./public-dev/src",
@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build:sass": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style nested -o $npm_package_config_public_path/styles -r $npm_package_config_src_path/sass",
-    "build:sass:production": "node-sass --importer node_modules/node-sass-globbing/index.js --output-style compressed -o $npm_package_config_public_path/styles -r $npm_package_config_src_path/sass",
+    "build:sass:production": "node-sass --importer node_modules/node-sass-globbing/index.js -o $npm_package_config_production_path/styles --output-style compressed -r $npm_package_config_src_path/sass",
     "build:autoprefixer": "postcss --use autoprefixer --replace $npm_package_config_public_path/styles/*.css && postcss --use autoprefixer --replace $npm_package_config_public_path/styles/smart_phone/*.css",
     "build:css": "run-s build:sass build:autoprefixer",
     "build:html": "ejs-cli --base-dir public-dev/src/ejs '*.ejs' --out $npm_package_config_public_path",
@@ -23,7 +23,7 @@
     "webpack": "webpack",
     "watch": "run-p watch:sass watch:ejs",
     "build": "npm-run-all build:*",
-    "hush": "node ./node-scripts/replace-filerev.js",
+    "hash": "node ./node-scripts/replace-filerev.js",
     "copy": "npm-run-all copy:*"
   },
   "author": "mio oishi",

@@ -1,11 +1,1 @@
-.test {
-  margin: 0;
-  box-shadow: 10px 10px 0 0;
-  border-radius: 10px;
-  display: flex;
-  padding: 0 0 0 0; }
-
-html {
-  font-size: 16px;
-  font-family: -apple-system, blinkMacSystemFont, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  line-height: 1.5; }
+*{margin:0;padding:0;-webkit-appearance:none;box-sizing:border-box}.test{margin:0;box-shadow:10px 10px 0 0;border-radius:10px;display:flex;padding:0 0 0 0}html{font-size:16px;font-family:-apple-system, blinkMacSystemFont, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;line-height:1.5}

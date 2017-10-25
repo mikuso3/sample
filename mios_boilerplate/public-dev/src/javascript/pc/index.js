@@ -4,6 +4,6 @@ var $ = require('jquery');
 
 $(function () {
   $('.test-text').click(function () {
-    $('.test-text2').toggle();
+    $('.test-text2').slideToggle();
   });
 });
